@@ -805,10 +805,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1477067002}
+  - component: {fileID: 1477066998}
   - component: {fileID: 1477067001}
   - component: {fileID: 1477067000}
   - component: {fileID: 1477066999}
-  - component: {fileID: 1477066998}
   m_Layer: 0
   m_Name: Switcher
   m_TagString: Untagged
@@ -1103,10 +1103,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1965814318}
+  - component: {fileID: 1965814314}
   - component: {fileID: 1965814317}
   - component: {fileID: 1965814316}
   - component: {fileID: 1965814315}
-  - component: {fileID: 1965814314}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -1126,6 +1126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31bbf705688601a4aa17e25ba6736390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _switcher: {fileID: 1477066998}
 --- !u!65 &1965814315
 BoxCollider:
   m_ObjectHideFlags: 0

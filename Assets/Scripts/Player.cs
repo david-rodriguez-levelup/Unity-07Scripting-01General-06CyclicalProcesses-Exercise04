@@ -1,13 +1,20 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+
+    #region Fields/Properties
+
     [SerializeField]
+    [Tooltip("Speed of the player (in units).")]
     private float _speed = 10;
 
     private Rigidbody _myRigidBody;
+
+    #endregion
+
+
+    #region Lifecycle
 
     private void Awake()
     {
@@ -25,5 +32,6 @@ public class Player : MonoBehaviour
         }
     }
 
+    #endregion
 
 }

@@ -1,19 +1,39 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EndPoint : MonoBehaviour
 {
-    public bool IsEnter { get; private set; }
+    /// <summary>
+    /// Delegate signature for "Reached" event.
+    /// </summary>
+    public delegate void ReachedAction();
 
-    private void Start()
-    {
-        IsEnter = false;
-    }
+    #region Fields/Properties
+
+    /// <summary>
+    /// Delegates subscribed to "Reached" event.
+    /// </summary>
+    public event ReachedAction OnReachedActions;
+
+    #endregion
+
+
+    #region Lifecycle
 
     private void OnTriggerEnter()
     {
-        IsEnter = true;
+        OnReached();
     }
+
+    #endregion
+
+
+    #region Own methods
+
+    private void OnReached()
+    {
+        OnReachedActions?.Invoke();
+    }
+
+    #endregion
 
 }
